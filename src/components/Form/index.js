@@ -27,8 +27,6 @@ export class Form extends React.Component {
   }
 
   render() {
-    console.log(this.button1)
-    console.log(this.button2)
 
     return (
       <form>
