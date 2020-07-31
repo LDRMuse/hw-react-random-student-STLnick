@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import { Button } from './Button'
 import { Input } from './Input'
 
+import './Form.css'
+
 export class Form extends React.Component {
   state = {
     addStudentText: '',
@@ -44,6 +46,7 @@ export class Form extends React.Component {
 
     return (
       <form>
+        <h1>Random Student Selector</h1>
         <Input
           htmlFor={this.input1.htmlFor}
           label={this.input1.label}
