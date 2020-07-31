@@ -26,6 +26,20 @@ export class Form extends React.Component {
     this.setState({ addStudentText: '', students: [...this.state.students, this.state.addStudentText] })
   }
 
+  handleRandomStudentBtnClick = (e) => {
+    e.preventDefault()
+    if (this.state.students.length > 0) {
+      // Grab random element from state.students
+      const student = this.state.students[Math.floor(Math.random() * this.state.students.length)]
+      // Update random input with that text
+      this.setState({ randomStudentText: student })
+      // Update input object
+      this.input2 = { ...this.input2, value: this.randomStudentText }
+    } else {
+      this.setState({ randomStudentText: 'No students yet!' })
+    }
+  }
+
   render() {
 
     return (
