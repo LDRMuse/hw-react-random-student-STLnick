@@ -19,6 +19,7 @@ export const Input = ({ disabled, htmlFor, label, placeholder, type, value, hand
         onChange={handler}
         placeholder={placeholder}
         type={type}
+        value={value}
       />
     </Fragment>
   )
@@ -37,4 +38,5 @@ Input.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
   type: PropTypes.string,
+  value: PropTypes.string
 }
