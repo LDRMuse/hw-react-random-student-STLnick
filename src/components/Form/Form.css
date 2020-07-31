@@ -1,0 +1,15 @@
+form {
+  align-items: center;
+  border: 2px solid dodgerblue;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+h1 {
+  color: dodgerblue;
+  font-size: 24px;
+}
