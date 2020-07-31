@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import './Input.css'
 
-export const Input = ({ input: { disabled, htmlFor, label, placeholder, type } }) => {
+export const Input = ({ input: { disabled, htmlFor, label, placeholder, type }, handler }) => {
 
   return (
     <Fragment>
@@ -16,6 +16,7 @@ export const Input = ({ input: { disabled, htmlFor, label, placeholder, type } }
       <input
         disabled={disabled}
         id={htmlFor}
+        onChange={handler}
         placeholder={placeholder}
         type={type}
       />
@@ -30,6 +31,7 @@ Input.defaultProps = {
 
 Input.propTypes = {
   disabled: PropTypes.bool,
+  handler: PropTypes.func,
   htmlFor: PropTypes.string,
   input: PropTypes.object,
   label: PropTypes.string,

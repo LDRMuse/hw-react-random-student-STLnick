@@ -5,9 +5,10 @@ import { Button } from './Button'
 import { Input } from './Input'
 
 export class Form extends React.Component {
-  constructor(props) {
-    super(props)
-    // Will need to bind methods here
+  state = {
+    addStudentText: '',
+    randomStudentText: '',
+    students: []
   }
 
   input1 = this.props.inputs[0]
@@ -15,16 +16,31 @@ export class Form extends React.Component {
   button1 = this.props.buttons[0]
   button2 = this.props.buttons[1]
 
+  handleAddStudentTextChange = (e) => {
+    this.setState({ addStudentText: e.target.value })
+  }
+
+  handleAddStudentBtnClick = (e) => {
+    e.preventDefault()
+    // Add text from input to students[] and reset input field
+    this.setState({ addStudentText: '', students: [...this.state.students, this.state.addStudentText] })
+  }
+
   render() {
     console.log(this.button1)
     console.log(this.button2)
 
     return (
       <form>
-        <Input input={this.input1} />
-        <Button button={this.button1} />
-        <Input input={this.input2} />
-        <Button button={this.button2} />
+        <Input
+          input={this.input1}
+          handler={this.handleAddStudentTextChange}
+          value={this.state.addStudentText}
+        />
+        <Input
+          input={this.input2}
+          value={this.state.randomStudentText}
+        />
       </form>
     )
   }
