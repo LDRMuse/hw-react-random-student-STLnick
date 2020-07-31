@@ -1,28 +1,38 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-export const Input = (props) => {
+import './Input.css'
+
+export const Input = ({ input: { disabled, htmlFor, label, placeholder, type } }) => {
 
   return (
     <Fragment>
-      <label htmlFor={props.htmlFor}>Add Student</label>
+      <label
+        className="screen-reader-text"
+        htmlFor={htmlFor}
+      >
+        Add Student
+      </label>
       <input
-        disabled={props.disabled}
-        id={props.htmlFor}
-        placeholder={props.placeholder}
-        type={props.type}
+        disabled={disabled}
+        id={htmlFor}
+        placeholder={placeholder}
+        type={type}
       />
     </Fragment>
   )
 }
 
 Input.defaultProps = {
-  disabled: false
+  disabled: false,
+  type: "text"
 }
 
 Input.propTypes = {
-  disabled: PropTypes.string,
+  disabled: PropTypes.bool,
   htmlFor: PropTypes.string,
+  input: PropTypes.object,
+  label: PropTypes.string,
   placeholder: PropTypes.string,
   type: PropTypes.string,
 }
