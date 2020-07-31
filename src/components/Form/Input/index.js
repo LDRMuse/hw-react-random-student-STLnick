@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import './Input.css'
 
-export const Input = ({ input: { disabled, htmlFor, label, placeholder, type }, handler }) => {
+export const Input = ({ disabled, htmlFor, label, placeholder, type, value, handler }) => {
 
   return (
     <Fragment>

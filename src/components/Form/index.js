@@ -33,13 +33,26 @@ export class Form extends React.Component {
     return (
       <form>
         <Input
-          input={this.input1}
+          htmlFor={this.input1.htmlFor}
+          label={this.input1.label}
+          placeholder={this.input1.placeholder}
           handler={this.handleAddStudentTextChange}
           value={this.state.addStudentText}
         />
+        <Button
+          buttonText={this.button1.buttonText}
+          handler={this.handleAddStudentBtnClick}
+        />
         <Input
-          input={this.input2}
+          disabled={this.input2.disabled}
+          htmlFor={this.input2.htmlFor}
+          label={this.input2.label}
+          placeholder={this.input2.placeholder}
           value={this.state.randomStudentText}
+        />
+        <Button
+          buttonText={this.button2.buttonText}
+          handler={this.handleRandomStudentBtnClick}
         />
       </form>
     )
