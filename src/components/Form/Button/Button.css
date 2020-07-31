@@ -1,0 +1,31 @@
+button {
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  outline: none;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  transition: background-color, box-shadow 0.5s;
+}
+
+.add-btn {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.add-btn:focus,
+.add-btn:hover {
+  background-color: blue;
+  box-shadow: 0 0 2px 2px dodgerblue;
+}
+
+.random-btn {
+  background-color: yellow;
+  color: #616161;
+}
+
+.random-btn:focus,
+.random-btn:hover {
+  background-color: darkgoldenrod;
+  box-shadow: 0 0 2px 2px yellow;
+}
