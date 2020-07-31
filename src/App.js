@@ -20,10 +20,12 @@ const inputs = [
 
 const buttons = [
   {
-    buttonText: "Add Student"
+    buttonText: "Add Student",
+    className: "add-btn"
   },
   {
-    buttonText: "Random Student"
+    buttonText: "Random Student",
+    className: "random-btn"
   }
 ]
 

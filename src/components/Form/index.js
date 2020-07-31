@@ -53,6 +53,7 @@ export class Form extends React.Component {
         />
         <Button
           buttonText={this.button1.buttonText}
+          className={this.button1.className}
           handler={this.handleAddStudentBtnClick}
         />
         <Input
@@ -64,6 +65,7 @@ export class Form extends React.Component {
         />
         <Button
           buttonText={this.button2.buttonText}
+          className={this.button2.className}
           handler={this.handleRandomStudentBtnClick}
         />
       </form>
