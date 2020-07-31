@@ -1,0 +1,5 @@
+.screen-reader-text {
+  left: -99999px;
+  position: absolute;
+  top: -99999px;
+}
